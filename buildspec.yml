@@ -24,4 +24,3 @@ artifacts:
     - app.js
     - package-lock.json
     - package.json
-    - node_modules/*
