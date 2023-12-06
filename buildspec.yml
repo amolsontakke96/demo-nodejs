@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - npm install
+
+  pre_build:
+    commands:
+      # Optionally, run any pre-build tasks or scripts
+      - echo running pre-bild
+      - npm run lint
+
+  build:
+    commands:
+      # Run your build tasks, tests, etc.
+      - echo running build
+      - npm run build
+
+artifacts:
+  files:
+    - app.js
+    - package-lock.json
+    - package.json
+    - node_modules/*
